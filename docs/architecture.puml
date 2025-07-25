@@ -1,0 +1,13 @@
+@startuml
+!define AWSPUML https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v14.0/LATEST/AWSPUML
+!include AWSPUML/AWSPUML
+
+actor User
+node Browser
+node Server
+database HTML
+
+User --> Browser : interacts
+Browser --> Server : HTTP
+Server --> HTML : serves files
+@enduml
